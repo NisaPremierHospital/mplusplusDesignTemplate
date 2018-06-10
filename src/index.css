@@ -1,7 +1,8 @@
+@import "css/fonts.min.css";
 body {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: "Proxima Nova",sans-serif;
 }
 
 .uk-card-primary {
@@ -10,6 +11,10 @@ body {
 
 .thinp {
     font-size: 1.0rem;
+}
+
+h1,h2,h3,h4,h5,h6,p,span,a{
+    font-family: "Proxima Nova",sans-serif;
 }
 
 .uk-box-shadow-hover-large:hover {
@@ -73,4 +78,25 @@ body {
 
 .patient{
     background-color: #fff;
+}
+body{
+    border-top: 5px solid #1b61a3;
+}
+
+.divided:after{
+    content: "";
+    height: 1.5em;
+    margin-left: 9px;
+    margin-right: 0;
+    border-right: 1px solid #e5e5e5;
+}
+
+.divider{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.info p{
+    line-height: 2;
 }

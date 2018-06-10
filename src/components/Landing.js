@@ -50,7 +50,7 @@ class Landing extends Component {
     return (
       <header>
         <Navbar/>
-        <section className="uk-section uk-flex-center container uk-flex-stretch uk-padding uk-padding-remove-horizontal uk-section-default" data-uk-grid  data-uk-height-match="target: > a > .uk-card; row: false">
+        <section className="uk-section uk-grid-small container uk-padding uk-padding-remove-horizontal uk-section-default" data-uk-grid  data-uk-height-match="target: > a > .uk-card; row: false">
           {this.state.cards.map((card, index) => {
            return <InfoCard key={index} card={card}/>
           })}

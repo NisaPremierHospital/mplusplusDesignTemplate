@@ -47,6 +47,23 @@ class PatientProfile extends Component {
                 <div><p className="uk-h5 uk-margin-remove"><Icon name='user' /> <span className="uk-text-primary uk-margin-small-right">01111110101110</span><span className="uk-margin-small-right">(61959)</span><span className="uk-badge uk-background-secondary">GRP2</span></p></div>
               </div>
             </div>
+          <div className="uk-padding">
+            <div className="uk-child-width-auto uk-grid-collapse info" data-uk-grid>
+              <p className="divider"><span className="uk-text-bold divided">Reason</span><span className="uk-margin-small-left uk-margin-small-right">For Labour & Delivery</span></p>
+              <p className="divider"><span className="uk-text-bold divided">Admitted On</span><span className="uk-margin-small-left uk-margin-small-right">16th, Aug 2017 07:26am</span></p>
+              <p className="divider"><span className="uk-text-bold divided">Anticipated Discharge</span><span className="uk-margin-small-left uk-margin-small-right">17/08/2017</span></p>
+              <p className="divider"><span className="uk-text-bold divided">Ward</span><span className="uk-margin-small-left uk-margin-small-right">NIGER [EXCLUSIVE]</span></p>
+              <p className="divider"><span className="uk-text-bold divided">Bed/Room</span><span className="uk-margin-small-left uk-margin-small-right">Exclusive Bed III/EXCLUSIVE RM 3</span></p>
+            </div>
+            <div className="uk-child-width-auto uk-grid-collapse info" data-uk-grid>
+              <p className="divider"><span className="uk-text-bold divided">Sex</span><span className="uk-margin-small-left uk-margin-small-right">Female</span></p>
+              <p className="divider"><span className="uk-text-bold divided">Admitted On</span><span className="uk-margin-small-left uk-margin-small-right">27 Apr, 1992 (25 years)</span></p>
+              <p className="divider"><span className="uk-text-bold divided">Insurance Status</span><span className="uk-margin-small-left uk-margin-small-right">PRIVATE [OLD](SELF)</span></p>
+              <p className="divider"><span className="uk-text-bold divided">Admitted</span><span className="uk-margin-small-left uk-margin-small-right">3 Time(s) [0 days Annual Cumm.]</span></p>
+              <p className="divider"><span className="uk-text-bold divided">Bed/Room</span><span className="uk-margin-small-left uk-margin-small-right">Exclusive Bed III/EXCLUSIVE RM 3</span></p>
+              <p className="divider"><span className="uk-text-bold divided">Last Vitals</span><span className="uk-margin-small-left uk-margin-small-right">...</span></p>
+            </div>
+          </div>
         </section>
       </header>
     );
