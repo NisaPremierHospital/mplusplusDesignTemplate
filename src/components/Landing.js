@@ -33,7 +33,7 @@ class Landing extends Component {
           ' discounts, refunds, ...'},
         {id: 18, link: '/', icon: 'bed', title: 'Death Certificates', width: 'uk-width-1-3@m', desc: 'Create or View' +
           ' Certification of Death of Patients'},
-        {id: 19, link: '/', icon: 'user md', title: 'Medical Staff Directory', width: 'uk-width-1-3@m', desc: 'Find' +
+        {id: 19, link: '/', icon: 'user md', title: 'Human Resources', width: 'uk-width-1-3@m', desc: 'Find' +
           ' a Doctor, Nurse, Medical Staff'},
         {id: 20, link: '/', icon: 'list alternate outline', title: 'Medical Reports', width: 'uk-width-1-3@m', desc: 'Medical Report Requests'},
         {id: 21, link: '/', icon: 'chart bar outline', title: 'Reports', width: 'uk-width-1-3@m', desc: 'Reports' +

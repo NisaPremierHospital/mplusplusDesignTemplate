@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import {BrowserRouter, Route} from 'react-router-dom';
 import Switch from "react-router-dom/es/Switch";
 import Landing from "./components/Landing";
-import DashLayout from "./components/DashLayout";
+import PatientProfile from "./components/PatientProfile";
 
 class App extends Component {
   render() {
@@ -11,7 +11,7 @@ class App extends Component {
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={Landing}/>
-          <Route exact path="/dash" component={DashLayout}/>
+          <Route path="/patientprof" component={PatientProfile}/>
         </Switch>
       </BrowserRouter>
     );
