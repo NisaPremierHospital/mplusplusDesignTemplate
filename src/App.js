@@ -4,6 +4,7 @@ import {BrowserRouter, Route} from 'react-router-dom';
 import Switch from "react-router-dom/es/Switch";
 import Landing from "./components/Landing";
 import PatientProfile from "./components/PatientProfile";
+import Login from "./components/Login";
 
 class App extends Component {
   render() {
@@ -12,6 +13,7 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={Landing}/>
           <Route path="/patientprof" component={PatientProfile}/>
+          <Route path="/login" component={Login}/>
         </Switch>
       </BrowserRouter>
     );

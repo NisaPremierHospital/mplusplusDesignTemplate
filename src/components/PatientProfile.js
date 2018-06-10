@@ -4,6 +4,13 @@ import Navbar from "./Navbar";
 // import './App.css';
 import Avatar from '../img/user.png'
 import {Icon, Label, Menu} from 'semantic-ui-react'
+import { Tab } from 'semantic-ui-react'
+
+const panes = [
+  { menuItem: 'Tab 1', pane: 'Tab 1 Content' },
+  { menuItem: 'Tab 2', pane: 'Tab 2 Content' },
+  { menuItem: 'Tab 3', pane: 'Tab 3 Content' },
+];
 
 class PatientProfile extends Component {
   render() {
@@ -63,7 +70,13 @@ class PatientProfile extends Component {
               <p className="divider"><span className="uk-text-bold divided">Bed/Room</span><span className="uk-margin-small-left uk-margin-small-right">Exclusive Bed III/EXCLUSIVE RM 3</span></p>
               <p className="divider"><span className="uk-text-bold divided">Last Vitals</span><span className="uk-margin-small-left uk-margin-small-right">...</span></p>
             </div>
+            <div className="uk-child-width-auto uk-grid-collapse info" data-uk-grid>
+              <a className="divider uk-link-dec"><Icon name='book' /><span className="uk-margin-small-left uk-text-bold divided">More Details...</span></a>
+              <a className="divider uk-link-dec"><Icon name='edit' /><span className="uk-margin-small-left uk-text-bold divided">Update Details</span></a>
+              <a className="divider uk-link-dec"><Icon name='exclamation circle' /><span className="uk-margin-small-left uk-text-bold divided">Notification Preference</span></a>
+            </div>
           </div>
+          <Tab panes={panes} renderActiveOnly={false} />
         </section>
       </header>
     );

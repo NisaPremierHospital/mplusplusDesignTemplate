@@ -83,11 +83,29 @@ body{
     border-top: 5px solid #1b61a3;
 }
 
+header.header{
+    height: 99vh;
+    background-color: #ededed!important;
+}
+
+.Logo{
+    position: relative;
+    height: 100px;
+    top: 30px!important;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.uk-button-def{
+    background-color: #1b61a3;
+    color: #ffffff;
+}
+
 .divided:after{
     content: "";
     height: 1.5em;
     margin-left: 9px;
-    margin-right: 0;
+    margin-right: 9px;
     border-right: 1px solid #e5e5e5;
 }
 
@@ -99,4 +117,8 @@ body{
 
 .info p{
     line-height: 2;
+}
+
+.uk-link-dec, .uk-link-dec:hover{
+    text-decoration: none;
 }
