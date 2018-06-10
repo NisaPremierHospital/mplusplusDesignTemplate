@@ -4,12 +4,6 @@ import { Icon } from 'semantic-ui-react'
 // import './App.css';
 
 class InfoCard extends Component {
-  constructor() {
-    super();
-    this.state = {
-      card: {}
-    }
-  }
   render() {
     return (
       <a className={`uk-link-reset uk-flex-stretch uk-height-1-1 ${this.props.card.width}`}>

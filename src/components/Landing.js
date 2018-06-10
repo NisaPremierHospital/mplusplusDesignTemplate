@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 // import logo from './logo.svg';
 // import './App.css';
 import InfoCard from "./InfoCard";
+import Navbar from "./Navbar";
 
 class Landing extends Component {
   constructor(props) {
@@ -47,11 +48,14 @@ class Landing extends Component {
   
   render() {
     return (
-      <section className="uk-section uk-padding uk-flex-stretch uk-section-default" data-uk-grid  data-uk-height-match="target: > a > .uk-card; row: false">
-        {this.state.cards.map((card, index) => {
-         return <InfoCard key={index} card={card}/>
-        })}
-      </section>
+      <header>
+        <Navbar/>
+        <section className="uk-section uk-flex-center container uk-flex-stretch uk-padding uk-padding-remove-horizontal uk-section-default" data-uk-grid  data-uk-height-match="target: > a > .uk-card; row: false">
+          {this.state.cards.map((card, index) => {
+           return <InfoCard key={index} card={card}/>
+          })}
+        </section>
+      </header>
     );
   }
 }
