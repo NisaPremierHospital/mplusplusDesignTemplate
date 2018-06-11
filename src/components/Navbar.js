@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from '../logo.svg';
+import logo from '../img/m++.png';
 import {Dropdown, Icon} from "semantic-ui-react";
 // import './App.css';
 

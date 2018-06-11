@@ -88,6 +88,11 @@ header.header{
     background-color: #ededed!important;
 }
 
+#nav{
+    position: relative;
+    z-index: 9810;
+}
+
 .Logo{
     position: relative;
     height: 100px;
@@ -121,4 +126,7 @@ header.header{
 
 .uk-link-dec, .uk-link-dec:hover{
     text-decoration: none;
+}
+.ui.attached.segment {
+    border: 0px solid #d4d4d5;
 }

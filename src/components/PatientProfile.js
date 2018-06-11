@@ -5,12 +5,15 @@ import Navbar from "./Navbar";
 import Avatar from '../img/user.png'
 import {Icon, Label, Menu} from 'semantic-ui-react'
 import { Tab } from 'semantic-ui-react'
+import InPatientNotes from "./InPatientNotes";
+import ClinicalTasks from "./ClinicalTasks";
+import OutPatientEncounters from "./OutPatientEncounters";
 
 const panes = [
-  { menuItem: 'Tab 1', pane: 'Tab 1 Content' },
-  { menuItem: 'Tab 2', pane: 'Tab 2 Content' },
-  { menuItem: 'Tab 3', pane: 'Tab 3 Content' },
-];
+  { menuItem: 'Clinical Tasks', render: () => <Tab.Pane><ClinicalTasks/></Tab.Pane> },
+  { menuItem: 'InPatient Notes', render: () => <Tab.Pane><InPatientNotes/></Tab.Pane> },
+  { menuItem: 'Out Patient Encounters', render: () => <Tab.Pane><OutPatientEncounters/></Tab.Pane> },
+]
 
 class PatientProfile extends Component {
   render() {
@@ -76,7 +79,7 @@ class PatientProfile extends Component {
               <a className="divider uk-link-dec"><Icon name='exclamation circle' /><span className="uk-margin-small-left uk-text-bold divided">Notification Preference</span></a>
             </div>
           </div>
-          <Tab panes={panes} renderActiveOnly={false} />
+          <Tab panes={panes}/>
         </section>
       </header>
     );

@@ -26,7 +26,7 @@ class Login extends Component {
           </div>
         </div>
         <footer className="uk-position-bottom-center uk-dark">
-          <h4 className="uk-text-bold">&copy;M++</h4>
+          <h4 className="uk-text-bold">&copy;M++ 2018</h4>
         </footer>
       </header>
     )
