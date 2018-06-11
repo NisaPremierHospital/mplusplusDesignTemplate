@@ -44,10 +44,6 @@ class Navbar extends Component {
         disabled: true,
       },
       { key: 'profile', text: 'Your Profile' },
-      { key: 'stars', text: 'Your Stars' },
-      { key: 'explore', text: 'Explore' },
-      { key: 'integrations', text: 'Integrations' },
-      { key: 'help', text: 'Help' },
       { key: 'settings', text: 'Settings' },
       { key: 'sign-out', text: 'Sign Out' },
     ]
@@ -70,7 +66,6 @@ class Navbar extends Component {
         <div className="uk-navbar-left">
           <ul className="uk-navbar-nav ">
             <li className="uk-active"><a className="uk-text-capitalize"><Icon name='home' size='large' />Home</a></li>
-            <li><a className="uk-text-capitalize">Patients Home</a></li>
             <li>
               <a>
                 <Dropdown trigger={trigger} options={options} />

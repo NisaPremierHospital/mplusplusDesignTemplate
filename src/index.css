@@ -130,3 +130,18 @@ header.header{
 .ui.attached.segment {
     border: 0px solid #d4d4d5;
 }
+
+.ReactTable .rt-tbody .rt-td {
+    text-align: center;
+}
+
+.ReactTable .rt-thead .rt-th.-cursor-pointer, .ReactTable .rt-thead .rt-td.-cursor-pointer {
+    background-color: #1b61a3!important;
+    color: #ffffff;
+}
+.rt-tr .rt-td:last-child{
+    color: #1b61a3;
+}
+.ReactTable .rt-thead .rt-th, .ReactTable .rt-thead .rt-td {
+    line-height: 2.3;
+}
