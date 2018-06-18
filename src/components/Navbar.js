@@ -48,7 +48,7 @@ class Navbar extends Component {
       { key: 'sign-out', text: 'Sign Out' },
     ]
     return (
-      <div id="nav" className="border-bottom uk-section-muted uk-box-shadow-small">
+      <div id="nav" className="border-bottom uk-padding-small uk-padding-remove-bottom uk-padding-remove-horizontal uk-section-muted uk-box-shadow-small">
       <nav className="container uk-navbar-container uk-flex-wrap" data-uk-navbar>
         <div className="uk-flex-between uk-margin-remove uk-width-1-1@s" data-uk-grid>
             <img className="logo" src={logo} alt=""/>

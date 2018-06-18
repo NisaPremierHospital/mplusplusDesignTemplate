@@ -5,10 +5,12 @@ import React, { Component } from 'react';
 import ReactTable from 'react-table';
 import Navbar from "./Navbar";
 import "react-table/react-table.css";
+import {Label, Message} from "semantic-ui-react";
 
 class Documents extends Component {
   render() {
-    const data = [{
+    const data = [
+      {
       date: '2015/11/11',
       category: 'N/A',
       name: 'test document',
@@ -18,7 +20,8 @@ class Documents extends Component {
       category: 'N/A',
       name: 'test document',
       patient: 'JUSTICE NUHU ADI',
-    }];
+    }
+    ];
   
     const columns = [{
       Header: 'Date',
@@ -35,17 +38,19 @@ class Documents extends Component {
     }];
   
     return (
-      <header>
-        <Navbar/>
-        <section className="container uk-card uk-box-shadow-medium uk-margin-small-top">
-          <button className="uk-button uk-button-def uk-margin-bottom">New Attachment</button>
-          <ReactTable
-            data={data}
-            columns={columns}
-          />
-        </section>
-      </header>
-    );
+    <header>
+            <Navbar/>
+            <section className="container uk-card uk-box-shadow-medium uk-margin-small-top" id="documents">
+              <button className="uk-button uk-button-def uk-margin-bottom">New Attachment</button>
+              <ReactTable
+                data={data}
+                showPagination={false}
+                columns={columns}
+                noDataText="No InPatient Note on this PersonDocuments Available!"
+              />
+            </section>)
+    </header>
+    )
   }
 }
 

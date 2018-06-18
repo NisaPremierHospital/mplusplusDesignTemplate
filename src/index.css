@@ -135,13 +135,26 @@ header.header{
     text-align: center;
 }
 
-.ReactTable .rt-thead .rt-th.-cursor-pointer, .ReactTable .rt-thead .rt-td.-cursor-pointer {
+.ReactTable .rt-thead.-header{
+    box-shadow: none !important;
+    font-weight: bolder;
+}
+
+#documents .ReactTable .rt-thead .rt-th.-cursor-pointer, .ReactTable .rt-thead .rt-td.-cursor-pointer {
     background-color: #1b61a3!important;
     color: #ffffff;
 }
-.rt-tr .rt-td:last-child{
+#documents .rt-tr .rt-td:last-child{
     color: #1b61a3;
 }
 .ReactTable .rt-thead .rt-th, .ReactTable .rt-thead .rt-td {
     line-height: 2.3;
+}
+
+.griddle-table{
+    width: 100%;
+    overflow-x: auto;
+}
+.griddle-table td{
+    text-align: center;
 }
