@@ -46,7 +46,7 @@ class Documents extends Component {
                 data={data}
                 showPagination={false}
                 columns={columns}
-                noDataText="No InPatient Note on this PersonDocuments Available!"
+                noDataText="No Documents!"
               />
             </section>)
     </header>
