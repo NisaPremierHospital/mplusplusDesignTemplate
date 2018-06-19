@@ -4,19 +4,51 @@ import Navbar from "./Navbar";
 // import './App.css';
 import Avatar from '../img/user.png'
 import {Icon, Label, Menu} from 'semantic-ui-react'
-import { Tab } from 'semantic-ui-react'
+// import { Tab } from 'semantic-ui-react'
 import InPatientNotes from "./InPatientNotes";
 import ClinicalTasks from "./ClinicalTasks";
 import OutPatientEncounters from "./OutPatientEncounters";
+import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
+import Typography from '@material-ui/core/Typography';
+import NursesObservations from "./NursesObservations";
+import FluidChart from "./FluidChart";
+import VitalSigns from "./VitalSigns";
 
-const panes = [
-  { menuItem: 'Clinical Tasks', render: () => <Tab.Pane><ClinicalTasks/></Tab.Pane> },
-  { menuItem: 'InPatient Notes', render: () => <Tab.Pane><InPatientNotes/></Tab.Pane> },
-  { menuItem: 'Out Patient Encounters', render: () => <Tab.Pane><OutPatientEncounters/></Tab.Pane> },
-]
+function TabContainer(props) {
+  return (
+    <Typography component="div" style={{ padding: 8 * 3 }}>
+      {props.children}
+    </Typography>
+  );
+}
 
+TabContainer.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+const styles = theme => ({
+  root: {
+    flexGrow: 1,
+    width: '100%',
+    backgroundColor: theme.palette.background.paper,
+  },
+});
 class PatientProfile extends Component {
+  state = {
+  value: 0,
+};
+  
+  handleChange = (event, value) => {
+    this.setState({ value });
+  };
   render() {
+    const { classes } = this.props;
+    const { value } = this.state;
+  
     return (
       <header>
         <Navbar/>
@@ -79,11 +111,41 @@ class PatientProfile extends Component {
               <a className="divider uk-link-dec"><Icon name='exclamation circle' /><span className="uk-margin-small-left uk-text-bold divided">Notification Preference</span></a>
             </div>
           </div>
-          <Tab panes={panes}/>
+          {/*<Tab panes={panes}/>*/}
+          <div className={classes.root}>
+            <AppBar position="static" color="default">
+              <Tabs
+                value={value}
+                onChange={this.handleChange}
+                indicatorColor="primary"
+                textColor="primary"
+                scrollable
+                scrollButtons="auto"
+              >
+                <Tab label="Clinical Tasks" />
+                <Tab label="InPatient Notes" />
+                <Tab label="Out Patient Encounters" />
+                <Tab label="Nurses Observations" />
+                <Tab label="Fluid Chart" />
+                <Tab label="Vital Signs" />
+                <Tab label="Regimens" />
+              </Tabs>
+            </AppBar>
+            {value === 0 && <TabContainer><ClinicalTasks/></TabContainer>}
+            {value === 1 && <TabContainer><InPatientNotes/></TabContainer>}
+            {value === 2 && <TabContainer><OutPatientEncounters/></TabContainer>}
+            {value === 3 && <TabContainer><NursesObservations/></TabContainer>}
+            {value === 4 && <TabContainer><FluidChart/></TabContainer>}
+            {value === 5 && <TabContainer><VitalSigns/></TabContainer>}
+            {value === 6 && <TabContainer>Item Seven</TabContainer>}
+          </div>
         </section>
       </header>
     );
   }
 }
+PatientProfile.propTypes = {
+  classes: PropTypes.object.isRequired,
+};
 
-export default PatientProfile;
+export default withStyles(styles)(PatientProfile);

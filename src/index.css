@@ -150,11 +150,32 @@ header.header{
 .ReactTable .rt-thead .rt-th, .ReactTable .rt-thead .rt-td {
     line-height: 2.3;
 }
-
+/*.ui.dropdown {*/
+    /*cursor: pointer;*/
+    /*position: absolute;*/
+/*}*/
+.ui.icon.button, .ui.icon.buttons .button {
+    padding: .27em .78571429em .27em;
+    position: absolute;
+    transform: translateY(-30%);
+}
 .griddle-table{
     width: 100%;
     overflow-x: auto;
 }
 .griddle-table td{
     text-align: center;
+}
+button.success{
+    background-color: #38b768;
+    color: #ffffff;
+}
+
+button.success:hover{
+    background-color: #37a052;
+    color: #ffffff;
+}
+button.success:active{
+    background-color: #278549;
+    color: #ffffff;
 }
