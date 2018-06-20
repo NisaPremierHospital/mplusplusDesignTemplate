@@ -127,6 +127,15 @@ class PatientProfile extends Component {
                 <Tab label="Fluid Chart" />
                 <Tab label="Vital Signs" />
                 <Tab label="Regimens" />
+                <Tab label="Allergens" />
+                <Tab label="Problem List" />
+                <Tab label="Labs" />
+                <Tab label="Imaging" />
+                <Tab label="Procedure" />
+                <Tab label="Care Team" />
+                <Tab label="Documents" />
+                <Tab label="Billing" />
+                <Tab label="Consumables" />
               </Tabs>
             </AppBar>
             {value === 0 && <TabContainer><ClinicalTasks/></TabContainer>}
@@ -135,7 +144,16 @@ class PatientProfile extends Component {
             {value === 3 && <TabContainer><NursesObservations/></TabContainer>}
             {value === 4 && <TabContainer><FluidChart/></TabContainer>}
             {value === 5 && <TabContainer><VitalSigns/></TabContainer>}
-            {value === 6 && <TabContainer>Item Seven</TabContainer>}
+            {value === 6 && <TabContainer>Regimens</TabContainer>}
+            {value === 7 && <TabContainer>Allergens</TabContainer>}
+            {value === 8 && <TabContainer>Problem List</TabContainer>}
+            {value === 9 && <TabContainer>Labs</TabContainer>}
+            {value === 10 && <TabContainer>Imaging</TabContainer>}
+            {value === 11 && <TabContainer>Procedure</TabContainer>}
+            {value === 12 && <TabContainer>Care Team</TabContainer>}
+            {value === 13 && <TabContainer>Documents</TabContainer>}
+            {value === 14 && <TabContainer>Billing</TabContainer>}
+            {value === 15 && <TabContainer>Consumables</TabContainer>}
           </div>
         </section>
       </header>
