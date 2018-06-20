@@ -30,24 +30,27 @@ class VitalSigns extends Component {
       { key: 3, text: 'Choice 3', value: 3 },
     ];
     const data = [{
-      name: 'Tanner Linsley',
-      age: 26,
+      action: 'Action',
+      date: '15/08/17 7:53pm',
+      department: 'Obstetric & Gynaecology',
       friend: {
-        name: 'Jason Maurer',
-        age: 23,
+        specialization: 'Obstetrician[Consultant]',
+        doctor: 'Dr. Henry Onyegbule',
       }
     },{
-      name: 'Tanner Linsley',
-      age: 26,
+      action: 'Action',
+      date: '14/08/17 2:07pm',
+      department: 'Obstetric & Gynaecology',
       friend: {
-        name: 'Jason Maurer',
-        age: 23,
+        specialization: 'Obstetrician[Senior Consultant] Grace Daniyan',
+        doctor: 'Manasoko Dr Daniyan',
       }
     }];
   
     const columns = [{
-      Header: 'Age',
-      accessor: 'age',
+      Header: 'Action',
+      accessor: 'action',
+      maxWidth: 200,
       Cell: props => (
         <div>
           <Button
@@ -71,15 +74,19 @@ class VitalSigns extends Component {
         </div>
       ) // Custom cell components!
     },{
-      Header: 'Name',
-      accessor: 'name' // String-based value accessors!
+      Header: 'Date',
+      accessor: 'date', // String-based value accessors!
+      width: 200,
+    },{
+      Header: 'Department',
+      accessor: 'department', // String-based value accessors!
     }, {
       id: 'friendName', // Required because our accessor is not a string
-      Header: 'Friend Name',
-      accessor: d => d.friend.name // Custom value accessors!
+      Header: 'Specialization',
+      accessor: d => d.friend.specialization // Custom value accessors!
     }, {
-      Header: props => <span>Friend Age</span>, // Custom header components!
-      accessor: 'friend.age'
+      Header: props => <span>Doctor</span>, // Custom header components!
+      accessor: 'friend.doctor'
     }];
   
     return (

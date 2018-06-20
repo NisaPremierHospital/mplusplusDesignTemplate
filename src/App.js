@@ -6,6 +6,7 @@ import Landing from "./components/Landing";
 import PatientProfile from "./components/PatientProfile";
 import Login from "./components/Login";
 import Documents from "./components/Documents";
+import Report from "./components/Report";
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
           <Route path="/patientprof" component={PatientProfile}/>
           <Route path="/login" component={Login}/>
           <Route path="/documents" component={Documents}/>
+          <Route path="/reports" component={Report}/>
         </Switch>
       </BrowserRouter>
     );
