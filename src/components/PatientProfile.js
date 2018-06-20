@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Navbar from "./Navbar";
 // import logo from './logo.svg';
 // import './App.css';
-import Avatar from '../img/user.png'
+// import Avatar from '../img/user.png'
 import {Icon, Label, Menu} from 'semantic-ui-react'
 // import { Tab } from 'semantic-ui-react'
 import InPatientNotes from "./InPatientNotes";
@@ -55,7 +55,7 @@ class PatientProfile extends Component {
         <section className="container uk-card uk-box-shadow-medium uk-margin-small-top">
             <div className="uk-grid-collapse patient uk-padding-small uk-margin-remove border-bottom" data-uk-grid data-uk-height-match="target: > div ; row: false" data-uk-sticky="top: #nav">
               <div className="uk-width-1-6@s imgHolder">
-                <img src={Avatar} alt=""/>
+                {/*<img src={Avatar} alt=""/>*/}<Icon size='massive' name='user circle' />
               </div>
               <div className="uk-width-5-6@s uk-flex uk-flex-wrap uk-flex-middle uk-child-width-1-1@s">
                 <div className="uk-flex uk-flex-between">
@@ -90,14 +90,12 @@ class PatientProfile extends Component {
               </div>
             </div>
           <div className="uk-padding">
-            <div className="uk-child-width-auto uk-grid-collapse info" data-uk-grid>
+            <div className="uk-child-width-1-2@s uk-grid-collapse info" data-uk-grid>
               <p className="divider"><span className="uk-text-bold divided">Reason</span><span className="uk-margin-small-left uk-margin-small-right">For Labour & Delivery</span></p>
               <p className="divider"><span className="uk-text-bold divided">Admitted On</span><span className="uk-margin-small-left uk-margin-small-right">16th, Aug 2017 07:26am</span></p>
               <p className="divider"><span className="uk-text-bold divided">Anticipated Discharge</span><span className="uk-margin-small-left uk-margin-small-right">17/08/2017</span></p>
               <p className="divider"><span className="uk-text-bold divided">Ward</span><span className="uk-margin-small-left uk-margin-small-right">NIGER [EXCLUSIVE]</span></p>
               <p className="divider"><span className="uk-text-bold divided">Bed/Room</span><span className="uk-margin-small-left uk-margin-small-right">Exclusive Bed III/EXCLUSIVE RM 3</span></p>
-            </div>
-            <div className="uk-child-width-auto uk-grid-collapse info" data-uk-grid>
               <p className="divider"><span className="uk-text-bold divided">Sex</span><span className="uk-margin-small-left uk-margin-small-right">Female</span></p>
               <p className="divider"><span className="uk-text-bold divided">Admitted On</span><span className="uk-margin-small-left uk-margin-small-right">27 Apr, 1992 (25 years)</span></p>
               <p className="divider"><span className="uk-text-bold divided">Insurance Status</span><span className="uk-margin-small-left uk-margin-small-right">PRIVATE [OLD](SELF)</span></p>
