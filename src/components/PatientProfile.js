@@ -17,6 +17,7 @@ import Typography from '@material-ui/core/Typography';
 import NursesObservations from "./NursesObservations";
 import FluidChart from "./FluidChart";
 import VitalSigns from "./VitalSigns";
+import Regimens from "./Regimens";
 
 function TabContainer(props) {
   return (
@@ -144,7 +145,7 @@ class PatientProfile extends Component {
             {value === 3 && <TabContainer><NursesObservations/></TabContainer>}
             {value === 4 && <TabContainer><FluidChart/></TabContainer>}
             {value === 5 && <TabContainer><VitalSigns/></TabContainer>}
-            {value === 6 && <TabContainer>Regimens</TabContainer>}
+            {value === 6 && <TabContainer><Regimens/></TabContainer>}
             {value === 7 && <TabContainer>Allergens</TabContainer>}
             {value === 8 && <TabContainer>Problem List</TabContainer>}
             {value === 9 && <TabContainer>Labs</TabContainer>}

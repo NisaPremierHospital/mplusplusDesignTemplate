@@ -1,4 +1,5 @@
 @import "css/fonts.min.css";
+@import "css/semantic.min.css";
 body {
     margin: 0;
     padding: 0;
@@ -166,6 +167,7 @@ header.header{
 .griddle-table td{
     text-align: center;
 }
+
 button.success{
     background-color: #38b768;
     color: #ffffff;
@@ -178,4 +180,23 @@ button.success:hover{
 button.success:active{
     background-color: #278549;
     color: #ffffff;
+}
+
+.simple-menu>div>ul>li{
+    height: 10px!important;
+}
+
+.simple-menu>div>ul{
+    padding: 0;
+}
+
+div.rt-td{
+    align-self: center;
+}
+
+#container {
+    max-width: 800px;
+    min-width: 380px;
+    height: 400px;
+    margin: 1em auto;
 }
