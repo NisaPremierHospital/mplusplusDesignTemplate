@@ -14,7 +14,7 @@ const optionsTemp = {
     scrollablePlotArea: {
       minWidth: 600
     },
-    height: (9 / 16 * 50) + '%' // 16:9 ratio
+    height: (9 / 16 * 70) + '%' // 16:9 ratio
   },
   
   title: {
@@ -63,7 +63,7 @@ const optionsTemp = {
 
 const optionBlood = {
   chart: {
-    height: (9 / 16 * 50) + '%' // 16:9 ratio
+    height: (9 / 16 * 70) + '%' // 16:9 ratio
   },
   
   title: {
@@ -76,7 +76,7 @@ const optionBlood = {
   
   yAxis: {
     title: {
-      text: 'Number of Employees'
+      text: 'Blood Pressure'
     },
     tickInterval: 200,
     startOnTick: true,
@@ -151,7 +151,7 @@ class VitalSigns extends Component {
             <div className="uk-flex uk-flex-middle uk-card uk-card-default uk-height-1-1">
               <div className="uk-card-body">
                 <div className="uk-flex uk-flex-middle uk-flex-wrap uk-text-center uk-child-width-1-1@s">
-                  <p>Last Temperature Reading</p>
+                  <p>Last Blood Pressure Reading</p>
                   <p className="uk-text-large">36.3<sup>o</sup>C</p>
                   <p>on 2017/08/17 5:05pm</p>
                   <p><a href="#" className="rem-under">Take New Reading</a></p>
