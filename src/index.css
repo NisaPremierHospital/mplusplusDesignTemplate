@@ -200,3 +200,7 @@ div.rt-td{
     height: 400px;
     margin: 1em auto;
 }
+
+.rem-under,.rem-under:active,.rem-under:hover{
+    text-decoration: none;
+}
