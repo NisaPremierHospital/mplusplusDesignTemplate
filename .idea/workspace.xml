@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="274c4b11-5dc1-4f44-b14b-bb14ab50bb42" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/VitalSigns.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/VitalSigns.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -31,8 +29,8 @@
       <file leaf-file-name="VitalSigns.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/VitalSigns.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="86" column="22" selection-start-line="86" selection-start-column="22" selection-end-line="86" selection-end-column="22" />
+            <state relative-caret-position="68">
+              <caret line="64" column="10" selection-start-line="64" selection-start-column="10" selection-end-line="64" selection-end-column="10" />
               <folding>
                 <element signature="e#143#178#0" expanded="true" />
                 <element signature="e#1515#1757#0" />
@@ -283,12 +281,12 @@
       <workItem from="1530040198954" duration="599000" />
       <workItem from="1530099916604" duration="610000" />
       <workItem from="1530124639687" duration="2170000" />
-      <workItem from="1530279989002" duration="11139000" />
+      <workItem from="1530279989002" duration="12193000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="142482000" />
+    <option name="totallyTimeSpent" value="143536000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="953" y="0" width="974" height="1047" extended-state="0" />
@@ -703,8 +701,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/VitalSigns.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="86" column="22" selection-start-line="86" selection-start-column="22" selection-end-line="86" selection-end-column="22" />
+        <state relative-caret-position="68">
+          <caret line="64" column="10" selection-start-line="64" selection-start-column="10" selection-end-line="64" selection-end-column="10" />
           <folding>
             <element signature="e#143#178#0" expanded="true" />
             <element signature="e#1515#1757#0" />

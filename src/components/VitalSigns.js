@@ -13,7 +13,8 @@ const optionsTemp = {
     panKey: 'shift',
     scrollablePlotArea: {
       minWidth: 600
-    }
+    },
+    height: (9 / 16 * 50) + '%' // 16:9 ratio
   },
   
   title: {
@@ -61,6 +62,10 @@ const optionsTemp = {
 };
 
 const optionBlood = {
+  chart: {
+    height: (9 / 16 * 50) + '%' // 16:9 ratio
+  },
+  
   title: {
     text: '<b>PATIENTS BLOOD PRESSURE</b>'
   },
