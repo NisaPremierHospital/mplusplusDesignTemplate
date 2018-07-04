@@ -89,7 +89,7 @@ class MedReport extends Component {
           <div className="uk-width-1-2@m uk-child-width-1-1@s uk-child-width-1-2@m" data-uk-grid>
           <div className="uk-child-width-1-1@s">
               <DateTimeInput
-                name="dateTime"
+                name="dateTimeFrom"
                 placeholder="Date From"
                 value={this.state.dateTimeFrom}
                 iconPosition="left"
@@ -97,17 +97,17 @@ class MedReport extends Component {
           </div>
           <div className="uk-child-width-1-1@s">
             <DateTimeInput
-              name="dateTime"
+              name="dateTimeTo"
               placeholder="Date To"
               value={this.state.dateTimeTo}
               iconPosition="left"
               onChange={this.handleChange} />
           </div>
-          </div>
-          <div className="uk-width-1-2@s">
-            <div className="uk-width-auto@m min-50 uk-display-inline-block">
+            <div className="uk-width-1-1@s min-50 uk-margin-small-top">
               <Dropdown placeholder='Skills' fluid multiple selection options={dat} />
             </div>
+          </div>
+          <div className="uk-width-1-2@s">
             <button className="uk-button uk-margin-small-left uk-button-primary">View</button>
             <button className="uk-button uk-margin-small-left uk-button-secondary">Download</button>
           </div>
