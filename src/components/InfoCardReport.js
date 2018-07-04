@@ -6,7 +6,7 @@ import { Icon } from 'semantic-ui-react'
 class InfoCardReport extends Component {
   render() {
     return (
-      <a data-uk-toggle={this.props.card.link} className={`uk-link-reset uk-flex-stretch uk-height-1-1 ${this.props.card.width}`}>
+      <a data-my-id={this.props.card.link} onClick={this.props.handleCardLink} className={`uk-link-reset uk-flex-stretch uk-height-1-1 ${this.props.card.width}`}>
         <div className="uk-card uk-text-center uk-card-default uk-box-shadow-hover-large uk-light uk-card-primary uk-card-small uk-card-body">
           <Icon name={this.props.card.icon} size='massive'/>
           <h3 className="uk-card-title uk-margin-small-bottom">{this.props.card.title}</h3>
