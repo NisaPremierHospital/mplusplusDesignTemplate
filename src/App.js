@@ -7,6 +7,7 @@ import PatientProfile from "./components/PatientProfile";
 import Login from "./components/Login";
 import Documents from "./components/Documents";
 import Report from "./components/Report";
+import SelectPatient from "./components/SelectPatient";
 
 class App extends Component {
   render() {
@@ -18,6 +19,7 @@ class App extends Component {
           <Route path="/login" component={Login}/>
           <Route path="/documents" component={Documents}/>
           <Route path="/reports" component={Report}/>
+          <Route path="/selectpatient" component={SelectPatient}/>
         </Switch>
       </BrowserRouter>
     );

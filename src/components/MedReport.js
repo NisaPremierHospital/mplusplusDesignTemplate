@@ -3,60 +3,56 @@ import {TextField} from "@material-ui/core/es/index";
 // import logo from './logo.svg';
 // import { Icon } from 'semantic-ui-react'
 // import './App.css';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
 import ReactTable from "react-table";
+import { Dropdown } from 'semantic-ui-react'
+import {
+  DateInput,
+  TimeInput,
+  DateTimeInput,
+  DatesRangeInput
+} from 'semantic-ui-calendar-react';
+const dat = [
+  { key: 'angular', text: 'Angular', value: 'angular' },
+  { key: 'css', text: 'CSS', value: 'css' },
+  { key: 'design', text: 'Graphic Design', value: 'design' },
+  { key: 'ember', text: 'Ember', value: 'ember' },
+  { key: 'html', text: 'HTML', value: 'html' },
+  { key: 'ia', text: 'Information Architecture', value: 'ia' },
+  { key: 'javascript', text: 'Javascript', value: 'javascript' },
+  { key: 'mech', text: 'Mechanical Engineering', value: 'mech' },
+  { key: 'meteor', text: 'Meteor', value: 'meteor' },
+  { key: 'node', text: 'NodeJS', value: 'node' },
+  { key: 'plumbing', text: 'Plumbing', value: 'plumbing' },
+  { key: 'python', text: 'Python', value: 'python' },
+  { key: 'rails', text: 'Rails', value: 'rails' },
+  { key: 'react', text: 'React', value: 'react' },
+  { key: 'repair', text: 'Kitchen Repair', value: 'repair' },
+  { key: 'ruby', text: 'Ruby', value: 'ruby' },
+  { key: 'ui', text: 'UI Design', value: 'ui' },
+  { key: 'ux', text: 'User Experience', value: 'ux' },
+]
 
 class MedReport extends Component {
-  styles = theme => ({
-    container: {
-      display: 'flex',
-      flexWrap: 'wrap',
-    },
-    textField: {
-      marginLeft: theme.spacing.unit,
-      marginRight: theme.spacing.unit,
-      width: 200,
-    },
-  });
+  constructor(props) {
+    super(props);
+    
+    this.state = {
+      date: '',
+      time: '',
+      dateTimeFrom: '',
+      dateTimeTo: '',
+      datesRange: ''
+    };
+  }
   
-  state = {
-    anchorEl: null,
-  };
-  
-  handleClick = event => {
-    this.setState({ anchorEl: event.currentTarget });
-  };
-  
-  handleClose = () => {
-    this.setState({ anchorEl: null });
-  };
+  handleChange = (event, {name, value}) => {
+    if (this.state.hasOwnProperty(name)) {
+      this.setState({ [name]: value });
+    }
+  }
   
   render() {
-    const styles = theme => ({
-      container: {
-        display: 'flex',
-        flexWrap: 'wrap',
-      },
-      textField: {
-        marginLeft: theme.spacing.unit,
-        marginRight: theme.spacing.unit,
-        width: 200,
-      },
-    });
-    
-    const { classes } = this.props;
-    const { anchorEl } = this.state;
-    const options = [
-      { key: 1, text: 'Choice 1', value: 1 },
-      { key: 2, text: 'Choice 2', value: 2 },
-      { key: 3, text: 'Choice 3', value: 3 },
-    ];
     const data = [{
-      action: 'Action',
       date: '15/08/17 7:53pm',
       department: 'Obstetric & Gynaecology',
       friend: {
@@ -64,7 +60,6 @@ class MedReport extends Component {
         doctor: 'Dr. Henry Onyegbule',
       }
     },{
-      action: 'Action',
       date: '14/08/17 2:07pm',
       department: 'Obstetric & Gynaecology',
       friend: {
@@ -74,32 +69,6 @@ class MedReport extends Component {
     }];
   
     const columns = [{
-      Header: 'Action',
-      accessor: 'action',
-      maxWidth: 200,
-      Cell: props => (
-        <div>
-          <Button
-            aria-owns={anchorEl ? 'simple-menu' : null}
-            aria-haspopup="true"
-            onClick={this.handleClick}
-            className="success"
-          >
-            Action
-          </Button>
-          <Menu
-            id="simple-menu"
-            anchorEl={anchorEl}
-            open={Boolean(anchorEl)}
-            onClose={this.handleClose}
-          >
-            <MenuItem onClick={this.handleClose}>View Details</MenuItem>
-            <MenuItem onClick={this.handleClose}>Print</MenuItem>
-            <MenuItem onClick={this.handleClose}>Refer</MenuItem>
-          </Menu>
-        </div>
-      ) // Custom cell components!
-    },{
       Header: 'Date',
       accessor: 'date', // String-based value accessors!
       width: 200,
@@ -116,36 +85,31 @@ class MedReport extends Component {
     }];
     return (
       <div>
-        <form className={`uk-child-width-1-4@s uk-width-4-5@m uk-margin-medium-bottom ${classes.container}`} noValidate data-uk-grid>
-          <div>
-            <TextField
-              id="from"
-              type="date"
-              defaultValue="0000-00-00"
-              className={classes.textField}
-              helperText="From"
-              InputLabelProps={{
-                shrink: true,
-              }}
-            />
+        <form className={`uk-child-width-1-4@s uk-width-1-1@m uk-margin-medium-bottom`} data-uk-grid>
+          <div className="uk-width-1-2@m uk-child-width-1-1@s uk-child-width-1-2@m" data-uk-grid>
+          <div className="uk-child-width-1-1@s">
+              <DateTimeInput
+                name="dateTime"
+                placeholder="Date From"
+                value={this.state.dateTimeFrom}
+                iconPosition="left"
+                onChange={this.handleChange} />
           </div>
-          <div>
-            <TextField
-              id="to"
-              type="date"
-              defaultValue="0000-00-00"
-              className={classes.textField}
-              helperText="To"
-              InputLabelProps={{
-                shrink: true,
-              }}
-            />
+          <div className="uk-child-width-1-1@s">
+            <DateTimeInput
+              name="dateTime"
+              placeholder="Date To"
+              value={this.state.dateTimeTo}
+              iconPosition="left"
+              onChange={this.handleChange} />
           </div>
-          <div>
-            <button className="uk-button uk-button-primary">View</button>
           </div>
-          <div>
-            <button className="uk-button uk-button-secondary">Download</button>
+          <div className="uk-width-1-2@s">
+            <div className="uk-width-1-3@m uk-display-inline-block">
+              <Dropdown placeholder='Skills' fluid multiple selection options={dat} />
+            </div>
+            <button className="uk-button uk-margin-small-left uk-button-primary">View</button>
+            <button className="uk-button uk-margin-small-left uk-button-secondary">Download</button>
           </div>
         </form>
         <ReactTable
@@ -158,9 +122,4 @@ class MedReport extends Component {
 }
 
 
-MedReport.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
-
-
-export default withStyles(this.styles)(MedReport);
+export default MedReport;

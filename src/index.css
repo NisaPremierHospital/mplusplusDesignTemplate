@@ -82,6 +82,11 @@ h1,h2,h3,h4,h5,h6,p,span,a{
 }
 body{
     border-top: 5px solid #1b61a3;
+    background: #f8f8f8;
+}
+
+section{
+    background: #f8f8f8;
 }
 
 header.header{
