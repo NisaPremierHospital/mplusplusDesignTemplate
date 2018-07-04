@@ -209,3 +209,7 @@ div.rt-td{
 .rem-under,.rem-under:active,.rem-under:hover{
     text-decoration: none;
 }
+
+.min-50{
+    min-width: calc((50%)/3);
+}

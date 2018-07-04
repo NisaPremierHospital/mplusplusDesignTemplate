@@ -105,7 +105,7 @@ class MedReport extends Component {
           </div>
           </div>
           <div className="uk-width-1-2@s">
-            <div className="uk-width-1-3@m uk-display-inline-block">
+            <div className="uk-width-auto@m min-50 uk-display-inline-block">
               <Dropdown placeholder='Skills' fluid multiple selection options={dat} />
             </div>
             <button className="uk-button uk-margin-small-left uk-button-primary">View</button>
