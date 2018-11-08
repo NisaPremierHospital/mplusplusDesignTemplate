@@ -58,6 +58,14 @@ h1,h2,h3,h4,h5,h6,p,span,a{
     }
 }
 
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 .imgHolder{
     height: 100px;
 }
@@ -67,14 +75,6 @@ h1,h2,h3,h4,h5,h6,p,span,a{
     width: 100%;
     object-fit: contain;
     object-position: center center;
-}
-
-.container {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
 }
 
 .patient{
@@ -212,4 +212,15 @@ div.rt-td{
 
 .min-50{
     min-width: calc((50%)/3);
+}
+
+.bgTrans{
+    background: transparent;
+}
+
+sup.col-dange {
+    top: -.1em;
+    color: red;
+    font-weight: bold;
+    left: .1em;
 }
